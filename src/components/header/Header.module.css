@@ -1,0 +1,27 @@
+/* Header styles */
+.header {
+  background-color: #282c34;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Title styles */
+.title {
+  margin: 0;
+}
+
+/* Navigation styles */
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Link styles */
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}

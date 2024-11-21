@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./components/header/Header.jsx";
+import SearchBar from "./components/searchBar/SearchBar.jsx";
+import "./App.css"; // Importing App.css
+import DataBlock from "./components/dataBlock/DataBlock.jsx";
 
 function App() {
+  const [searchText, setSearchText] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <SearchBar searchText={searchText} setSearchText={setSearchText} />
+      <div className="dataHolder">
+        <DataBlock platform="X" sentiment="positive" keyTerm={searchText} />
+        <DataBlock
+          platform="Instagram"
+          sentiment="negative"
+          keyTerm={searchText}
+        />
+        <DataBlock platform="Facebook" keyTerm={searchText} />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,9 @@
+.searchBarDiv {
+  display: flex;
+  justify-content: center;
+}
+div input {
+  width: 80%;
+  font-size: 24px;
+  border: 2px solid #282c34;
+}
